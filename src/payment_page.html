@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="/styles/payment.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/utils.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <form action="">
+        <!--Location of Server-->
+        <h1 class="main-heading">PAYMENT PAGE</h1>
+        
+
+        <form>
+          <div class="details container">
+            <label for="option1">count.fee</label>
+            <input type="checkbox" id="option1" name="option" value="1" /><br />
+
+            <label for="option2">Bus fee</label>
+            <input type="checkbox" id="option2" name="option" value="2" /><br />
+
+            <label for="option3">NBA</label>
+            <input type="checkbox" id="option3" name="option" value="3" /><br />
+
+            <label for="option4">Hostel Fee</label>
+            <input type="checkbox" id="option4" name="option" value="4" /><br />
+
+            <label for="option5">Exam fee</label>
+            <input type="checkbox" id="option5" name="option" value="5" /><br />
+
+            <label for="option6">JNTUH FEE</label>
+            <input type="checkbox" id="option6" name="option" value="6" /><br />
+          </div>
+          
+        </form>
+        <hr>
+
+        <h2>Payment Information</h2>
+        <div>
+          Accepted Cards <br />
+          <div>
+            <img src="/public/Visa.png" alt="Visa" class="cards" id="visa" />
+            <img src="/public/Rupay.png" alt="Rupay" class="cards" id="rupay" />
+            <img
+              src="/public/Mastercard.png"
+              alt="MasterCard"
+              class="cards"
+              id="mastercard"
+            />
+          </div>
+          Card Type: *
+          <select name="card_type" id="card_type" required>
+            <option value="">--Select a Card Type</option>
+            //when user first visits it will not be stored in server
+            <option value="visa">Visa</option>
+            <option value="rupay">Rupay</option>
+            <option value="mastercard">MasterCard</option>
+          </select>
+        </div>
+        <div>
+          Card Number: *
+          <input
+            type="text"
+            name="card_number"
+            id="card_number"
+            placeholder="5555-6666-7777-8888"
+            required
+          />
+        </div>
+        <div>
+          Expiration Date: *
+          <input type="date" name="exp_date" id="exp_date" required />
+        </div>
+        <div>
+          CVV: * <input type="password" name="cvv" id="cvv" placeholder="123"  />
+        </div>
+        <!--  <input class="btn container" type="submit" value="Pay Now" /> -->
+          <button class="btn container"> <a href="/src/success.html" style="color: var(--clr-light);">Pay Now</a></button>
+      </form>
+    </div>
+    <!-- <script type="module" src="/"></script> -->
+  </body>
+</html>
